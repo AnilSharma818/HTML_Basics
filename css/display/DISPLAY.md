@@ -29,7 +29,7 @@ Examples of inline elements:
 
 display: none; is commonly used with JavaScript to hide and show elements without deleting and recreating them.
 
-The <script> element use display: none; as its default. 
+The 'script' element use display: none; as its default. 
 
 <h3>Override The Default Display Value</h3>
 
