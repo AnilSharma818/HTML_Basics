@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function(){
+        $("#btn1").click(function(){
+          $(".test").hide(); 
+       });
+    
+        $("#btn2").click(function(){
+          $(this).hide(); 
+       });
+        
+        $("#btn3").click(function(){
+          $("p.test1").hide(); 
+       });
+        
+        $("#btn4").click(function(){
+          $("p:first").hide(); 
+       });
+        
+        $("#btn5").click(function(){
+          $("ul li:first").hide(); 
+       });
+        
+        $("#btn6").click(function(){
+          $("ul li:first-child").hide(); 
+       });
+        
+        /*
+        $("[href]")
+        $("[taget='_blank']")
+        $("a[href]")
+        $(":button")
+        $("tr:even")*/
+    });    
+</script>
+</head>
+    
+<body>
+
+<h2 class="test">This is a heading</h2>
+
+<p class="test1">This is a paragraph test1.</p>
+<p class="test2">This is another paragraph test2.</p>
+    
+<ul>
+    <li>option1</li>
+    <li>option2</li>
+    <li>option3</li>
+</ul>    
+
+<ul> 
+    <li>option1</li>
+    <li>option2</li>
+    <li>option3</li>
+</ul>    
+
+<button id="btn1">Button 1</button>
+<button id="btn2">Button 2</button>
+<button id="btn3">Button 3</button>
+<button id="btn4">Button 4</button>
+<button id="btn5">Button 5</button>
+<button id="btn6">Button 6</button>    
+
+</body>
+    
+</html>
