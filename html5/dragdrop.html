@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Drag Drop</title>
+    <script>
+        
+        function onLoadComplete(){
+            
+            var targets = document.querySelectorAll('div');
+            for(var i=0;i<targets.length;i++){
+                var trg = targets[i];
+                trg.addEventListener('dragstart', onDragStart);
+                trg.addEventListener('dragover', onDragOver);
+                trg.addEventListener('dragenter', onDragEnter);
+                trg.addEventListener('dragleave', onDragLeave);
+                trg.addEventListener('drop', onDrop);
+                trg.addEventListener('dragend', onDragEnd)
+            }
+        }
+        
+        
+        function onDragStart(e){
+            console.log("drag start");
+            
+            // user setData and getData to set and get values while drag drop 
+            
+            //dataTransfer
+            //setDragImage to set drag drop image
+        }
+        
+        function onDragOver(e){
+            console.log("drag over");
+            if (e.preventDefault) {
+                e.preventDefault(); // Necessary. Allows us to drop.
+              }
+            
+            // this is to add/remove class from hover object
+           // e.classList
+        }
+        
+        function onDragEnter(e){
+            console.log("drag enter");
+        }
+        
+        function onDragLeave(e){
+            console.log("drag leave");
+        }
+        
+        function onDrop(e){
+            console.log("drop");
+            if (e.stopPropagation) {
+                e.stopPropagation(); // stops the browser from redirecting.
+            }
+        }
+        
+        function onDragEnd(e){
+            console.log("drag end");
+        }
+        
+    </script>
+    
+    <style>
+        div{
+            width: 40px;
+            height: 40px;
+            background-color: blueviolet;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body onload="onLoadComplete()">
+  
+      <div draggable="true" dr><header>A</header></div>
+      <div draggable="true"><header>B</header></div>
+      <div draggable="true"><header>C</header></div>
+    
+</body>
+</html>

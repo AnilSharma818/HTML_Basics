@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dedicated workers</title>
+    <script>
+        
+        var worker;
+        
+        function addWorker(){
+            worker = new Worker('workerscript.js');
+            worker.addEventListener('message', onWorkerMessage);
+        }
+        
+        function onWorkerMessage(e){
+            var elm = document.getElementById('messageLog');
+            elm.innerHTML = e.data;
+        }
+        
+        function senMessage(){
+            var elm = document.getElementById('txt');
+            var elmLog = document.getElementById('messageLog');
+            elmLog.innerHTML = "SENDING TO WORKER: " + elm.value;
+            worker.postMessage(elm.value);
+        }
+        
+        function stopWorker(){
+            worker.postMessage("STOP");
+        }
+    </script>
+</head>
+<body onload="addWorker()">
+  
+    <input id="txt" type="text" style="width:250px;"/>
+    <button type="button" onclick="senMessage()">Send Message to Worker</button>
+    <button type="button" onclick="stopWorker()">Stop Worker</button>
+    <p id="messageLog"></p>
+    
+</body>
+</html>
