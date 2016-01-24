@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>hoisting</title>
+    <script>
+        
+        function initVars(obj, obj1){
+            var a = b = 20;
+            
+            obj = null;
+            obj1.name = 'Rekha Sharma';
+        }
+        
+        function showName(){
+            console.log('Show name 1');
+        }
+        
+        showName();
+        
+        var showName = function(){
+            console.log('Show name 2');
+        }
+        
+        showName(); 
+        
+        function printValues(){
+            var item = {name:'Anil'};
+            var item1 = {name: 'Rekha'};
+            initVars(item, item1);
+            
+           // console.log(a); // will be undefined as local to function
+            console.log(b); // will be 20 as b will be considered as global variable
+            console.log(item);
+            console.log(item1);
+        }
+        
+       
+    </script>
+</head>
+<body>
+    
+    <button type="button" onclick="printValues()">PrintValues</button>
+    <p id="messageLog"></p>
+    
+</body>
+</html>

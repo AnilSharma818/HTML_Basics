@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Geolocation</title>
+    <script>
+        
+        function getLocation(){
+            
+            if(navigator.geolocation){
+                console.log('geo location does not supported.');
+            }else{
+                var loc = navigator.geolocation.getCurrentPosition();
+                var elm = document.getElementById('messageLog');
+                elm.innerHTML = loc.coords.latitude + ' : ' + loc.coords.longitude;   
+            }
+            
+        }
+        
+    </script>
+</head>
+<body>
+  
+    <button type="button" onclick="getLocation()">Get My Location</button>
+    <p id="messageLog"></p>
+    
+</body>
+</html>

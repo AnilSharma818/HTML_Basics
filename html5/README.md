@@ -5,6 +5,9 @@ Features
     WebSockets
     Audio and Video
     Geolocation
+        -getCurrentPosition
+        -watchPosition
+        
     DragDrop
         Events
         -dragstart
@@ -14,6 +17,11 @@ Features
         -dragover
         -drop
         -dragend
+        dataTransfer
+        dataTransfer.setData
+        dataTransfer.getData
+        setDragImage
+        classList
         
     Webworkers 
         -Types of workers
@@ -29,11 +37,14 @@ Features
         
     Server Sent Event
     Web Messaging
-    LocalStorage
+    WebStorage
+        -localStorage
+        -sessionStorage
+        
     IndexedDB
     webSQL
     New input attributes
-    Sementics and its usage
+    Sementics and nesting rules
     
     Examples
         technoques to get elements from DOM

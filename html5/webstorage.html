@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>WebStorage</title>
+    <script>
+        
+        function storeInLocal(){
+            localStorage.setItem('name', 'Anil Sharma');
+            
+        }
+        
+        function getFromLocal(){
+            var msg = localStorage.getItem('name');
+            alert('Hello ' + msg);
+        }
+        
+        function storeInSession(){
+            sessionStorage.setItem('name', 'Anil Sharma');
+
+        }
+        
+        function getFromSession(){
+            var msg = sessionStorage.getItem('name');
+            alert('Hello ' + msg);
+        }
+        
+        function removeFromSession(){
+           // sessionStorage.removeItem('name');
+            sessionStorage.clear();
+        }
+        
+    </script>
+</head>
+<body>
+  
+    <button type="button" onclick="storeInLocal()">Store Value in local Storage</button>
+    <button type="button" onclick="getFromLocal()">Get Value from local Storage</button>
+    
+    
+    <button type="button" onclick="storeInSession()">Store Value in session Storage</button>
+    <button type="button" onclick="getFromSession()">Get Value from session Storage</button>
+    <button type="button" onclick="removeFromSession()">Remove from session Storage</button>
+    
+</body>
+</html>
