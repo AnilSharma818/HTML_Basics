@@ -1,0 +1,48 @@
+body{
+   background-color: cornflowerblue; 
+}
+
+#carousel{
+    margin: auto;
+    position: relative;
+    width: 692px;
+    height: 150px;
+    top: 100px;
+}
+
+#carousel .leftscroll, #carousel .itemcontainer, #carousel .rightscroll{
+    float: left;
+    position: relative;
+}
+
+#carousel .leftscroll, #carousel .rightscroll{
+    width: 40px;
+    height: 150px;
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+#carousel .itemcontainer{
+    width: 612px;
+    height: 150px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#carousel .itemlist{
+    list-style-type: none;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#carousel .itemlist li{
+    display: inline-block;
+    margin: 2px;
+}
+
+#carousel .itemlist li img{
+    width: 200px;
+    height: 146px;    
+}
